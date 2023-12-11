@@ -16,7 +16,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer=Adam(lr=0.001), loss='binary_crossentropy', metrics=['accuracy'])
 
 
-model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
 
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f'Test Accuracy: {accuracy}')
